@@ -1,0 +1,29 @@
+[*] público 
+[!] privado
+
+
+
+// autenticações
+[*] POST api/auth (email, password) => Fazer login na plataforma
+[!] DELETE api/auth = logout
+[!] PATCH api/auth/refresh = Faz um refresh do token 
+
+// usuários
+[*] POST api/user (name, email, birth_date, password) = Criação de conta
+[!] PUT api/user (name, email, birth_date, password, password_confirm, work, city) = Atualiza usuário 
+[!] GET api/user = Obter informação do seu usuário
+[!] GET api/user/{id} = Obter informações do usuário específico
+[!] PUT api/user/avatar (avatar) = Atualiza o avatar
+[!] PUT api/user/cover (cover) = Atualiza a foto de fundo
+
+// feed 
+[!] GET api/feed (page) = obter o feed
+[!] GET api/user/feed = Obter o seu feed
+[!] GET api/user/{id}/feed = Obter feed do usuário específico
+[!] POST api/feed (text, image) = Faz uma postagem no feed
+[!] POST api/feed/{id}/like = Dá like na publicação
+[!] POST api/feed/{id}/comment (text) = Faz comentário na publicação
+
+
+// busca
+[!] GET api/search (q) = Faz busca 
